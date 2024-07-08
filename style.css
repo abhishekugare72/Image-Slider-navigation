@@ -1,0 +1,69 @@
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
+#slider {
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    transition: left 1s ease-in-out;
+}
+
+#slider figure img {
+    float: left;
+    width: 20%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.button-container {
+    position: absolute;
+    top: 68%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animated-button {
+    position: relative;
+    padding: 20px 40px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+}
+
+.link {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.link.active {
+    opacity: 1;
+    transform: translateY(0);
+}
